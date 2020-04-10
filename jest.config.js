@@ -3,10 +3,6 @@
 
 module.exports = {
   testEnvironment: "node",
-  testRegex: ".*_test\\.mjs$",
-  transform: {
-    ".*\\.mjs$": "esm"
-  },
-  transformIgnorePatterns: ["/node_modules/"],
+  testRegex: ".*\\.test\\.js$",
   moduleFileExtensions: ["js", "json", "jsx", "node", "mjs"]
 };

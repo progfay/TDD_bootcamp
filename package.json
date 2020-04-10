@@ -21,18 +21,14 @@
   },
   "scripts": {
     "js": "node main.js",
-    "mjs": "node --experimental-modules main.mjs",
     "fmt": "prettier --write *js *.json lib/*js",
     "fmt:check": "prettier --check *js *.json lib/*js",
-    "lint": "eslint main.js main.mjs lib/*js",
+    "lint": "eslint lib/*js",
     "pretest": "npm run fmt:check && npm run lint",
-    "test": "npm run test:js",
-    "test:js": "jest --config jest_js.config.js",
-    "test:mjs": "jest --config jest_mjs.config.js",
-    "watch:js": "npm run test:js -- --watch",
-    "watch:mjs": "npm run test:mjs --  --watch"
+    "test": "jest --config jest.config.js",
+    "watch": "npm test -- --watch"
   },
-  "main": "main.mjs",
+  "main": "lib/index.js",
   "devDependencies": {
     "acorn": "^7.1.1",
     "eslint": "^6.8.0",
